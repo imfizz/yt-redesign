@@ -1,0 +1,39 @@
+.sign-up-form {
+  padding: 10px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #20242d;
+  display: inline-flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.sign-up-form > input {
+  background: #2c313c;
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 22px;
+  color: white;
+  border: none;
+  text-indent: 10px;
+}
+
+.sign-up-form button {
+  height: 30px;
+  width: 150px;
+  background-color: #0a40a0;
+  border: none;
+  border-radius: 5px;
+}
+
+.disable-signup {
+  pointer-events: none;
+}
+
+label {
+  margin-bottom: 6px;
+}

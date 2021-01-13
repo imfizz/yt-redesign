@@ -1,0 +1,39 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: calc(100% - 10px);
+}
+
+nav #welcome-user {
+  display: inline-flex;
+  font-size: 2.4em;
+  width: 80%;
+  align-items: flex-end;
+  height: 100%;
+}
+
+#user-name {
+  font-weight: lighter;
+  color: #616773;
+}
+
+nav #search-container {
+  display: inline-flex;
+  justify-self: flex-end;
+  align-self: flex-end;
+  float: right;
+  margin-top: 10px;
+}
+
+nav #search-container form input {
+  height: 30px;
+  width: 150px;
+  border-radius: 8px;
+  background: #2c313c;
+  border: none;
+  text-indent: 10px;
+  color: white;
+  font-size: 11px;
+}

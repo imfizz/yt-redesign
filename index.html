@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/header.css">
+    <link rel="stylesheet" type="text/css" href="style/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="style/nav.css">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/subscribers.css">
+    <link rel="stylesheet" type="text/css" href="style/videos.css">
+    <link rel="stylesheet" type="text/css" href="style/footer.css">
+    <link rel="stylesheet" type="text/css" href="style/signupform.css">
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <script src="https://kit.fontawesome.com/dae6fbdc21.js" crossorigin="anonymous"></script>
+    <title>YouTube Redesign</title>
+</head>
+<body>
+
+    <div id="main-container">
+        <header>
+            <form id="header-form">
+                <div class="header-container">
+                    <div id="user-profile-name">Sign Up</div>
+                    <div id="user-profile-picture" class="user-profile-picture1">
+                        <a id="user-profile-icon"><i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+            </form>
+        </header>
+        <sidebar>
+            <div id="logo">
+                <h1>YOUTUBE</h1>
+                <h3>REDESIGN</h3>
+            </div>
+
+            <div id="links">
+                <div id="dashboard">
+                    <a id="dashboard-icon">
+                        <i class="fas fa-home"></i>
+                    </a>
+                    <span>Dashboard</span>
+                </div>
+
+                
+                <div id="sidebar-footer">
+                    <a>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                    <span id="user-logout">Logout</span>
+                </div>
+            </div>
+        </sidebar>
+        <nav>
+            <div id="welcome-user">Welcome&nbsp;<div id="user-name"></div></div>
+            <div id="search-container">
+                <form id="myform">
+                    <input type="text" id="search" placeholder="Search">
+                </form>
+            </div>  
+        </nav>
+        <div id="subscribers">
+            <div class="make-it-aline">
+                <a><i class="far fa-heart"></i></a>
+                <b class="sub-head">Channel Title </b>
+            </div>    
+            <div><p id="channelTitle"></p></div>
+        </div>
+        <div id="videos">
+            <div class="make-it-aline">
+                <a><i class="fas fa-video"></i></a>
+                <b class="sub-head">Description </b>
+            </div>    
+            <div id="description"><p id="description-content"></p></div>
+        </div>
+        <main>
+            <div id="youtube-profile-now-playing">
+                <div class="profile-container">
+                    <img id="youtube-profile">
+                </div>
+            </div>
+
+
+            <div id="other-videos">
+
+            </div>
+        </main>
+        <footer>
+            <div id="banner">
+                
+            </div>
+        </footer>
+    </div>
+
+    <!-- scripts -->
+    <script type="text/javascript" src="script/login.js"></script>
+    <script type="module" src="script/controller.js"></script>
+    <script>
+        function callme(x,y,z,a){
+            const banner = document.querySelector("#banner");
+
+            const channelTitle = document.querySelector("#channelTitle");
+
+            const descriptionContent = document.querySelector("#description-content");
+
+            const youtubeProfile = document.querySelector("#youtube-profile");
+
+            banner.innerHTML = '';
+
+            banner.innerHTML = `<iframe width="565" height="319" src="https://www.youtube.com/embed/${x}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            `;
+
+            channelTitle.innerHTML = y;
+
+            descriptionContent.innerHTML = z;
+
+            youtubeProfile.setAttribute("src", a);
+        }
+
+
+        document.querySelector("#myform").addEventListener('submit', function(){
+            const otherVideos = document.querySelector("#other-videos");
+            otherVideos.innerHTML = "";
+        })
+        
+    </script>
+</body>
+</html>

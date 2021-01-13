@@ -1,0 +1,87 @@
+* {
+  font-family: "lato", arial, calibri;
+}
+
+html {
+  background: /*#0f1c33*/ #a9afbb;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+
+#main-container {
+  height: 600px;
+  max-width: 1000px;
+  background-color: #050a13;
+  margin: 3em auto;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(12, minmax(35px, auto));
+  box-sizing: border-box;
+  grid-template-areas:
+    "sidebar header header header header"
+    "sidebar header header header header"
+    "sidebar nav nav nav nav"
+    "sidebar main subscribers videos videos"
+    "sidebar main footer footer footer"
+    "sidebar main footer footer footer"
+    "sidebar main footer footer footer"
+    "sidebar main footer footer footer"
+    "sidebar main footer footer footer"
+    "sidebar main footer footer footer"
+    "sidebar main footer footer footer"
+    "sidebar main footer footer footer";
+  grid-gap: 10px;
+  box-shadow: 0px 5px 15px black;
+}
+
+nav {
+  grid-area: nav;
+  border-radius: 0;
+  margin-right: 10px;
+}
+
+main {
+  grid-area: main;
+  border-radius: 15px;
+  background: #2c313c;
+  margin-bottom: 10px;
+  padding: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.sub-head {
+  color: darkgray;
+}
+
+#subscribers {
+  grid-area: subscribers;
+  border-radius: 15px;
+  background: #2c313c;
+}
+
+#views {
+  grid-area: views;
+  border-radius: 15px;
+  background: #2c313c;
+}
+
+#videos {
+  grid-area: videos;
+  border-radius: 15px;
+  background: #2c313c;
+  margin-right: 10px;
+}
+
+footer {
+  grid-area: footer;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #363b46;
+  display: flex;
+  flex-direction: column;
+}
