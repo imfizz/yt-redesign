@@ -24,7 +24,7 @@ html {
     "sidebar header header header header"
     "sidebar nav nav nav nav"
     "sidebar main subscribers videos videos"
-    "sidebar main footer footer footer"
+    "sidebar main subscribers videos videos"
     "sidebar main footer footer footer"
     "sidebar main footer footer footer"
     "sidebar main footer footer footer"
@@ -34,6 +34,11 @@ html {
     "sidebar main footer footer footer";
   grid-gap: 10px;
   box-shadow: 0px 5px 15px black;
+}
+
+iframe {
+  height: 325px;
+  width: 565px;
 }
 
 nav {
